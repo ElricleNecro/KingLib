@@ -173,12 +173,11 @@ void King_gbs_cb(King *obj, int *NbPart, gbs_cb f /*double (*f)(King*, const int
 /**
  * Résout les équations du modèles de King et donne à la solution obtenue.
  *
- * \param[in, out] *obj Structure de type King
- * \param[in]  NbPart	Nombre de particule du système
+ * \param[inout] *obj Structure de type King
  *
  * \sa King
  */
-void King_ugbs(King *obj, const int NbPart);
+void King_ugbs(King *obj);
 
 /**
  * Fonction de Distribution du modèle de King, adimensionnée :
