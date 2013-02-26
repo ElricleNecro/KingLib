@@ -147,7 +147,7 @@ double King_Ep(const King *Amas, const int a, const int b);
  * Résout les équations du modèles de King et donne les solutions à la solution obtenue. Il calcule aussi les bornes en distances et vitesses
  * maximum ainsi que la masse totale du système.
  *
- * \param[in, out] *obj Structure de type King
+ * \param[inout] *obj Structure de type King
  * \param[in]  NbPart	Nombre de particule du système
  *
  * \sa King
@@ -161,8 +161,8 @@ void King_gbs(King *obj, const int NbPart);
  * Résout les équations du modèles de King et donne les solutions à la solution obtenue. Il calcule aussi les bornes en distances et vitesses
  * maximum ainsi que la masse totale du système.
  *
- * \param[in, out] *obj Structure de type King.
- * \param[in, out] *NbPart Nombre de particule du système.
+ * \param[inout] *obj Structure de type King.
+ * \param[inout] *NbPart Nombre de particule du système.
  * \param[in] f Fonction callback pour calculer le nombre de particule du King.
  * \param[in] *data Paramètre a passer en plus à la fonction callback.
  *
@@ -223,7 +223,7 @@ int read_utile(King *Amas, const char const *str);
 /**
  * Résout les équations du modèles de King et donne les solutions à la solution obtenue.
  *
- * \param[in, out] *obj Structure de type King
+ * \param[inout] *obj Structure de type King
  * \param[in]  NbPart	Nombre de particule du système
  *
  * \sa King
