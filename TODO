@@ -1,0 +1,11 @@
+SWIG :
+	(x) Tester à fond l'interface avec python.
+	(x) Comprendre l'erreur avec ruby (déjà sur une piste)
+
+Beauté du code :
+	(x) Changer les noms de fonction de la lib pour quelque chose de plus cohérent
+et simple.
+
+Documentation :
+	(x) Compléter la doc de la lib (seul le fichier king.h est documenté pour le moment).
+	(x) Ajouter une cible pour la documentation.

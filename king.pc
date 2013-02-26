@@ -1,0 +1,15 @@
+# king pkg-config source file
+
+prefix=/home/plum/.local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: KingLib
+Description: Bibliothéque de gestion du modèle de King. Résout les équations et permet d'obtenir un certain nombre de quantité.
+Version: 2.0.0
+Requires:
+Conflicts:
+Libs: -L${libdir} -lking
+Libs.private: -lking -lm
+Cflags: -I${includedir}/king

@@ -1,0 +1,28 @@
+Pour compiler, taper dans un terminal :
+	mkdir build && cd build
+	cmake ..
+	make
+
+Pour installer :
+	make install DESTDIR=/chemin/vers/le/dossier/d/installation
+
+Pour utiliser les Flags de compilations en release (ajoute un -O3) :
+	cmake -D CMAKE_BUILD_TYPE:STRING=release
+en debug (flags -g3) :
+	cmake -D CMAKE_BUILD_TYPE:STRING=debug
+Par défaut, cette variable est vide (changera peut-être dans le future).
+
+Pour activer la compilation de l'interface avec python2, on utilise la
+variable ACTIVATE_SWIG_PY de type BOOL. Par défaut, elle est à false.
+Pour la passer true, il suffit de passer à cmake l'option :
+	-D ACTIVATE_SWIG_PY2:BOOL=true
+
+Pour utiliser plutôt une interface python3, utiliser :
+	-D ACTIVATE_SWIG_PY3:BOOL=true
+puis faîtes un :
+	make PyWRAP
+
+Pour ceux qui sont malade à l'idée d'utiliser python, il est possible de compiler
+l'interface pour ruby :
+	-D ACTIVATE_SWIG_RB:BOOL=true
+
