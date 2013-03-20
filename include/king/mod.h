@@ -9,6 +9,10 @@
 #include <math.h>
 #endif
 
+#ifdef USE_FENV
+#include <fenv.h>
+#endif
+
 #include "rk4.h"
 #include "cte_phys.h"
 

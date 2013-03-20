@@ -5,7 +5,7 @@ CFLAG=-std=c99 -g3 -W -Wall -Wshadow -Wcast-qual \
       -Wredundant-decls \
       -Wnested-externs \
       -ffloat-store -Wunreachable-code -Wwrite-strings -fPIC
-
+#-DUSE_FENV
 INC=-I $$HOME/.local/include -I include/
 LFLAG=-L $$HOME/.local/lib -fPIC
 LINK=-lm

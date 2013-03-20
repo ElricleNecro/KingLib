@@ -102,7 +102,11 @@ int Resol_King(Phys_King *obj, double **res, double *tmax, int *taille)
 		j++;
 		pas_var(&t, u2, dt, N, f_sphereking, prec, &(*obj));
 
+#ifdef USE_FENV
+		if( fetestexcept(FE_DIVBYZERO|FE_INEXACT|FE_INVALID|FE_OVERFLOW|FE_UNDERFLOW) )//isnan(rhoking(u2[0])/obj->rho_ori) != 0 )
+#else
 		if( isnan(rhoking(u2[0])/obj->rho_ori) != 0 )
+#endif
 		{
 			t  -= dt;
 			//dt /= 2.0;
