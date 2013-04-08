@@ -1,6 +1,6 @@
 # king pkg-config source file
 
-prefix=HOME/.local
+prefix=HOME
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -10,6 +10,6 @@ Description: Bibliothéque de gestion du modèle de King. Résout les équations
 Version: 2.0.0
 Requires:
 Conflicts:
-Libs: -L${libdir} -lking
+Libs: -L${libdir} -lking -lm
 Libs.private: -lking -lm
-Cflags: -I${includedir}/king
+Cflags: -I${includedir}

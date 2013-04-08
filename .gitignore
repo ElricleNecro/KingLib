@@ -1,0 +1,9 @@
+*.swp
+CMakeCache.txt
+AncMake/*
+*.gz
+*.log
+*bak
+build/*
+Doc/*
+
