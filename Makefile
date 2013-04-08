@@ -6,9 +6,10 @@ CFLAG=-std=c99 -g3 -W -Wall -Wshadow -Wcast-qual \
       -Wnested-externs \
       -ffloat-store -Wunreachable-code -Wwrite-strings -fPIC
 #-DUSE_FENV
-INC=-I $$HOME/.local/include -I include/
-LFLAG=-L $$HOME/.local/lib -fPIC
-LINK=-lm
+INC=-I include/
+LFLAG=-fPIC
+LINK=
+#-lm
 
 TAR=tar
 TAR_OPT=-cvzf
@@ -65,7 +66,7 @@ install:$(LIBDIR)/$(LIBNAME).so
 	mkdir -p $(PREFIX)/include
 	cp $< $(PREFIX)/lib/.
 	cp -r include/$(PROJ) $(PREFIX)/include/.
-	TMP=$(PREFIX) sed -e "s:HOME:$$TMP:g" king.pc > $(PREFIX)/lib/pkg-config/king.pc
+	TMP=$(PREFIX) sed -e "s:HOME:$$TMP:g" king.pc > $(PREFIX)/lib/pkgconfig/king.pc
 
 #!install-py:
 #!	Installe la librairie en utilisant la variable PYPREFIX
