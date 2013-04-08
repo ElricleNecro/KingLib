@@ -1,6 +1,6 @@
 # king pkg-config source file
 
-prefix=/home/plum/.local
+prefix=HOME/.local
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

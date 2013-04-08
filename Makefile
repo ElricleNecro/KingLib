@@ -65,6 +65,7 @@ install:$(LIBDIR)/$(LIBNAME).so
 	mkdir -p $(PREFIX)/include
 	cp $< $(PREFIX)/lib/.
 	cp -r include/$(PROJ) $(PREFIX)/include/.
+	TMP=$(PREFIX) sed -e "s:HOME:$$TMP:g" king.pc > $(PREFIX)/lib/pkg-config/king.pc
 
 #!install-py:
 #!	Installe la librairie en utilisant la variable PYPREFIX
