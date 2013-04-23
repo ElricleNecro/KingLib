@@ -224,7 +224,6 @@ int read_utile(King *Amas, const char const *str);
  * Résout les équations du modèles de King et donne les solutions à la solution obtenue.
  *
  * \param[inout] *obj Structure de type King
- * \param[in]  NbPart	Nombre de particule du système
  *
  * \sa King
  */
