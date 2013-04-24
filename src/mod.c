@@ -19,7 +19,7 @@ double get_pas(void)
 	return dt;
 }
 
-void set_pas(double ndt)
+void set_pas(const double ndt)
 {
 	dt = ndt;
 }
