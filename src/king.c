@@ -490,25 +490,6 @@ void King_gbs_cb(King *obj, int *NbPart, gbs_cb f /*double (*f)(King*, const int
 
 void King_gud(King *obj)
 {
-	//int taille, err;
-	//obj->amas.rmax    = 100.0;
-
-	//obj->col = 5;
-
-	//if( (obj->don = double2d((int)((obj->amas.rmax)/get_pas()), obj->col)) == NULL)
-	//{
-		//fprintf(stderr, "\033[31mErreur d'allocation du tableau res\n\033[00m");
-		//exit(EXIT_FAILURE);
-	//}
-
-	//if( (err = Resol_King(&(obj->amas), obj->don, &(obj->amas.rmax), &taille)) != 1)
-	//{
-		//fprintf(stderr, "\033[31mErreur lors du calcul du potentiel :: %d\033[00m\n", err);
-		//King_free(obj);
-		//exit(err);
-	//}
-
-	//obj->lig = taille;
 	King_ugbs(obj);
 	obj->amas.rmax    = obj->amas.rmax * obj->amas.rc;
 }
