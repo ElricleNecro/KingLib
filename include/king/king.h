@@ -79,6 +79,7 @@ double King_get_PhysVal(const King *obj, int i, int j);
  * @param sig_v la dispersion de vitesse.
  */
 King NewKing(const double W0, const double rc, const double sig_v);
+#define King_New NewKing
 
 /**
  * Calcul la température cinétique au rayon Amas.don[i][0]
