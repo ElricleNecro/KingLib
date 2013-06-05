@@ -12,11 +12,11 @@
 \********************************************************************************/
 
 //Constante de la gravitation :
-extern double G_SI 6.67e-11;		// Nm^2kg^{-2}
+#define G_SI 6.67e-11		// Nm^2kg^{-2}
 //Vitesse de la lumiere :
-extern double C_LUM 3.0e8;		// m/s
+#define C_LUM 3.0e8		// m/s
 //Constante de Boltzmann :
-extern double KB 1.380664e-23;		// J/K
+#define KB 1.380664e-23		// J/K
 
 //Valeur de pi :
 #ifndef M_PI
