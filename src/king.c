@@ -12,15 +12,16 @@ double King_get_PhysVal(const King *obj, int i, int j)
         return obj->don[i][j];
 }
 
-King NewKing(const double W0, const double rc, const double sig_v)
+King King_New(const double W0, const double rc, const double sig_v)
 {
 	King Amas;
 
-	Amas.amas.W0 = W0;
-	Amas.amas.rc = rc;
+	Amas.amas.W0     = W0;
+	Amas.amas.rc     = rc;
 	Amas.amas.sigma2 = sig_v*sig_v;
 	Amas.amas.G      = G_SI;
 	Amas.amas.rho0   = Amas.amas.sigma2 / ( 8.0 * M_PI * G_SI * Amas.amas.rc * Amas.amas.rc );
+	Amas.don         = NULL;
 
 	return Amas;
 }

@@ -78,8 +78,8 @@ double King_get_PhysVal(const King *obj, int i, int j);
  * @param rc La longueur caractéristique (rayon de cœur) du modèle,
  * @param sig_v la dispersion de vitesse.
  */
-King NewKing(const double W0, const double rc, const double sig_v);
-#define King_New NewKing
+King King_New(const double W0, const double rc, const double sig_v);
+#define NewKing King_New
 
 /**
  * Calcul la température cinétique au rayon Amas.don[i][0]
