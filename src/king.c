@@ -7,9 +7,16 @@
 /*extern*/ int K_mu   = 4;
 /*extern*/ int K_temp = 5;
 
+static double G = G_SI;
+
 double King_get_PhysVal(const King *obj, int i, int j)
 {
         return obj->don[i][j];
+}
+
+void King_SetG(const double G_new)
+{
+	G = G_new;
 }
 
 King King_New(const double W0, const double rc, const double sig_v)
@@ -19,8 +26,8 @@ King King_New(const double W0, const double rc, const double sig_v)
 	Amas.amas.W0     = W0;
 	Amas.amas.rc     = rc;
 	Amas.amas.sigma2 = sig_v*sig_v;
-	Amas.amas.G      = G_SI;
-	Amas.amas.rho0   = Amas.amas.sigma2 / ( 8.0 * M_PI * G_SI * Amas.amas.rc * Amas.amas.rc );
+	Amas.amas.G      = G;
+	Amas.amas.rho0   = Amas.amas.sigma2 / ( 8.0 * M_PI * Amas.amas.G * Amas.amas.rc * Amas.amas.rc );
 	Amas.don         = NULL;
 
 	return Amas;

@@ -73,6 +73,12 @@ extern int K_mu   = 4;
 double King_get_PhysVal(const King *obj, int i, int j);
 
 /**
+ * Change la valeur de G pour tout les calculs.
+ * @param G_new La nouvelle valeur de G en kg^-1 m^3 s^-2.
+ */
+void King_SetG(const double G_new);
+
+/**
  * Crée une nouvelle structure de type King en calculant tous les paramètres nécessaire à partir de :
  * @param W0 La profondeur du puits de potentiel (sans dimension),
  * @param rc La longueur caractéristique (rayon de cœur) du modèle,
